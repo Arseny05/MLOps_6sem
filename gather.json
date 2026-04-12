@@ -1,0 +1,6 @@
+{
+    "db_path": "database.db",
+    "csv_path": "train_raw.csv",
+    "batch_size": 1024,
+    "delay_sec": 0.5
+}

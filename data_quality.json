@@ -1,0 +1,110 @@
+{
+    "batch 1": {
+        "quality": "64.0625",
+        "complete_records": "656",
+        "total_records": "1024",
+        "min_missings": "is_holiday_miss",
+        "max_missings": "t_real_miss"
+    },
+    "batch 2": {
+        "quality": "62.59765625",
+        "complete_records": "641",
+        "total_records": "1024",
+        "min_missings": "t_real_miss",
+        "max_missings": "cnt_miss"
+    },
+    "batch 3": {
+        "quality": "64.2578125",
+        "complete_records": "658",
+        "total_records": "1024",
+        "min_missings": "wind_speed_miss",
+        "max_missings": "weather_miss"
+    },
+    "batch 4": {
+        "quality": "62.98828125",
+        "complete_records": "645",
+        "total_records": "1024",
+        "min_missings": "cnt_miss",
+        "max_missings": "weather_miss"
+    },
+    "batch 5": {
+        "quality": "62.3046875",
+        "complete_records": "638",
+        "total_records": "1024",
+        "min_missings": "wind_speed_miss",
+        "max_missings": "season_miss"
+    },
+    "batch 6": {
+        "quality": "62.6953125",
+        "complete_records": "642",
+        "total_records": "1024",
+        "min_missings": "t_real_miss",
+        "max_missings": "t_feel_miss"
+    },
+    "batch 7": {
+        "quality": "64.0625",
+        "complete_records": "656",
+        "total_records": "1024",
+        "min_missings": "wind_speed_miss",
+        "max_missings": "t_real_miss"
+    },
+    "batch 8": {
+        "quality": "63.671875",
+        "complete_records": "652",
+        "total_records": "1024",
+        "min_missings": "is_weekend_miss",
+        "max_missings": "wind_speed_miss"
+    },
+    "batch 9": {
+        "quality": "63.57421875",
+        "complete_records": "651",
+        "total_records": "1024",
+        "min_missings": "t_feel_miss",
+        "max_missings": "wind_speed_miss"
+    },
+    "batch 10": {
+        "quality": "61.5234375",
+        "complete_records": "630",
+        "total_records": "1024",
+        "min_missings": "wind_speed_miss",
+        "max_missings": "t_feel_miss"
+    },
+    "batch 11": {
+        "quality": "64.453125",
+        "complete_records": "660",
+        "total_records": "1024",
+        "min_missings": "wind_speed_miss",
+        "max_missings": "is_holiday_miss"
+    },
+    "batch 12": {
+        "quality": "63.28125",
+        "complete_records": "648",
+        "total_records": "1024",
+        "min_missings": "t_real_miss",
+        "max_missings": "wind_speed_miss"
+    },
+    "batch 13": {
+        "quality": "63.37890625",
+        "complete_records": "649",
+        "total_records": "1024",
+        "min_missings": "season_miss",
+        "max_missings": "cnt_miss"
+    },
+    "batch 14": {
+        "quality": "58.984375",
+        "complete_records": "604",
+        "total_records": "1024",
+        "min_missings": "hum_miss",
+        "max_missings": "t_feel_miss"
+    },
+    "batch 15": {
+        "quality": "63.55421686746988",
+        "complete_records": "422",
+        "total_records": "664",
+        "min_missings": "is_weekend_miss",
+        "max_missings": "hum_miss"
+    },
+    "total_quality": "63.013333333333335",
+    "min_missings": "is_holiday_miss",
+    "max_missings": "weather_miss"
+}
