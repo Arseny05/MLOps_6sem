@@ -4,7 +4,7 @@ import sqlite3
 from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
 
 class Encoder:
-    season_code = {'winter':0, 'spring':1, 'summer':2, 'autumn':3}
+    season_code = {'winter':0, 'spring':1, 'summer':2, 'fall':3}
     day_week_code = {'Sunday':6, 'Monday':0, 'Tuesday':1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday':5}
 
     def __init__(self, db_path='database.db'):
@@ -31,9 +31,18 @@ class Encoder:
     def __str__(self):
         return str(self.df.head())
     def write(self, name):
+        if self.df.isnull().any().any():
+            print("Обнаружены NULL значения в колонках:")
+            print(self.df.columns[self.df.isnull().any()].tolist())
+            print("Количество NULL по колонкам:")
+            print(self.df.isnull().sum())
         self.df.to_sql(name, self.conn, if_exists='replace', index=False)
         print(f'{name} table is ready!')
+        #self.conn.close()
+
+    def __del__(self):
         self.conn.close()
+        print('Кодирование и обработка  переменных завершена!')
 
     def Standart(self, cols):
         sc = StandardScaler()

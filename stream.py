@@ -18,11 +18,12 @@ class DataLoader:
         self.len = len(self.df)
         self.num_batches = math.ceil(self.len / self.batch_size)
         print(f'Получено представление потока из {self.num_batches} батчей')
+        self.conn = sqlite3.connect(self.db_path)
         if flag:
             self.create_database()
 
     def create_database(self):
-        self.conn = sqlite3.connect(self.db_path)
+        #self.conn = sqlite3.connect(self.db_path)
         self.conn.execute('PRAGMA foreign_keys = ON')
 
         self.conn.execute('''
