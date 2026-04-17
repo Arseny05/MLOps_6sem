@@ -8,3 +8,4 @@ scikit-learn>=1.5,<2
 tabulate>=0.9,<1
 tqdm>=4.66,<5
 torch>=2.4,<3
+statsmodels>=0.14.6,<1
