@@ -1,0 +1,72 @@
+database:
+    path: "./models_monitoring.db"
+
+paths:
+    datasets_dir: "./datasets"
+    checkpoints_dir: "./checkpoints"
+
+system:
+    device: "cuda"
+    monitor_interval: 300
+
+training:
+    batch_size: 128
+    num_workers: 2
+
+cv:
+    n_splits: 5
+
+monitor:
+    sample_interval: 0.1
+
+models:
+    nn:
+        lr: 0.003
+        epoch: 10
+        weight_decay: 0.00001
+        dropout: 0.4
+
+    sgd:
+        alpha: 0.001
+        max_iter: 1000
+        learning_rate: "invscaling"
+        loss: "squared_error"
+        penalty: "l2"
+
+    tree:
+        criterion: "squared_error"
+        splitter: "best"
+        max_depth: 10
+
+    for:
+        criterion: "squared_error"
+        n_estimators: 50
+        max_depth: 10
+
+param_grids:
+    nn:
+        lr: [0.0001, 0.0003, 0.001, 0.003]
+        epoch: [20, 40, 80]
+        weight_decay: [0.0, 0.00001, 0.0001]
+        dropout: [0.1, 0.2, 0.4]
+
+    sgd:
+        alpha: [0.0001, 0.001, 0.01]
+        penalty: ["l2", "elasticnet"]
+        loss: ["squared_error", "huber"]
+        learning_rate: ["optimal", "invscaling", "adaptive"]
+        eta0: [0.001, 0.01]
+        max_iter: [1000, 3000]
+
+    tree:
+        max_depth: [5, 10, 15, null]
+        min_samples_split: [2, 5, 10]
+        min_samples_leaf: [1, 2, 5]
+        criterion: ["squared_error", "absolute_error"]
+
+    for:
+        n_estimators: [100, 200]
+        max_depth: [10, 20, null]
+        min_samples_split: [2, 5]
+        min_samples_leaf: [1, 2]
+        max_features: ["sqrt", 1.0]
