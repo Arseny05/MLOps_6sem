@@ -17,11 +17,7 @@ if format == '':
     default = True
 else:
     default = False
-flag = input('Drop old data:...')
-if flag == 'yes':
-    flag = True
-else:
-    flag = False
+flag = 'yes'
 if not default:
     dict = get_param(format)
     db_path = dict['db_path']
